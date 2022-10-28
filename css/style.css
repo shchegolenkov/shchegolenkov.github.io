@@ -22,6 +22,15 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.header-top__menu-button {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.header-logo__image {
+  width: 177px;
+}
 
 .search-form {
   display: flex;
@@ -92,5 +101,58 @@ body {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 31px;
+  padding: 31px 0;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 91%;
+  }
+}
+@media (max-width: 992px) {
+  .search-form {
+    margin-left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .header-logo__image {
+    width: 132px;
+  }
+  .header-top {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .search-form {
+    width: 340px;
+  }
+  .nav__link {
+    font-size: 12px;
+    padding: 22px 0px;
+  }
+}
+@media (max-width: 678px) {
+  .header-logo__image {
+    width: 99px;
+  }
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    width: 16px;
+    height: 11px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  .menu-button__line {
+    background-color: #333;
+    width: 16px;
+    height: 1px;
+  }
+  .wrapper {
+    max-width: 86%;
+  }
+  .search-form, .user, .nav {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
