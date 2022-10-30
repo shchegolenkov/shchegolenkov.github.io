@@ -30,6 +30,28 @@
     padding: 7px
     flex-direction: column
     align-items: center
+  &-block
+    display: flex
+    justify-content: space-between
+  &-column
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__booking
+    max-width: 350px
+    min-height: 210px
+    background-color: $theme-color-blue
+    padding: 30px 29px 22px 24px
+    border-radius: 8px
+    font-family: Nunito, sans-serif
+    color: white
+  &__map
+    width: 347px
+    height: 213px
+    border-radius: 10px
+    background: url(../img/map.png) no-repeat center
+    overflow: hidden
+
 .user
   &-rating
     &__text
@@ -84,3 +106,89 @@
     bottom: 0
     z-index: 5
     background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+
+.booking
+  &__price
+    display: flex
+    flex-direction: column
+    margin-bottom: 9px
+  &__properties
+    margin-top: 4px
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+  &-params
+    display: flex
+    justify-content: space-between
+  &-quick
+    display: flex
+    justify-content: space-between
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    margin-bottom: 17px
+    &__phone
+      position: relative
+      &::before
+        content: ''
+        background: url('../img/phone-call.svg') center no-repeat
+        width: 14px
+        height: 14px
+        position: absolute
+        left: -22px
+        top: 0
+        bottom: 0
+        margin: auto
+      &-link
+        color: inherit
+        text-decoration: none
+  &-button
+    background-color: $theme-color-red
+    color: white
+    border: none
+    border-radius: 4px
+    width: 100%
+    min-height: 45px
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    cursor: pointer
+
+.price
+  &__start
+    font-weight: 400
+    font-size: 10px
+    line-height: 14px
+  &__pricetag
+    font-weight: 800
+    font-size: 24px
+    line-height: 30px
+  &__duration
+    font-weight: 400
+    font-size: 12px
+    line-height: 16px
+
+.properties
+  &__guests
+    display: block
+    text-align: right
+    position: relative
+    &::before
+      content: ''
+      background: url('../img/user.svg') center no-repeat
+      width: 14px
+      height: 14px
+      position: absolute
+      left: -22px
+  &__rooms
+    display: block
+    text-align: right
+    position: relative
+    margin-top: 8px
+    &::before
+      content: ''
+      background: url('../img/home.svg') center no-repeat
+      width: 14px
+      height: 14px
+      position: absolute
+      left: -22px
