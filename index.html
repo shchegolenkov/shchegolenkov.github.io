@@ -8,10 +8,12 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Best Tour Plan - Hotel Booking</title>
   </head>
+
   <body>
     <header class="header">
       <div class="wrapper">
@@ -73,18 +75,101 @@
       </nav>
     </header>
     <nav class="breadcrumbs">
-      <ul class="breadcrumbs-list">
-        <li class="breadcrumbs-list__item">
-          <a href="#" class="breadcrumbs-list__link">Home</a>
-        </li>
-        <li class="breadcrumbs-list__item">
-          <a href="#" class="breadcrumbs-list__link">Flash Offers</a>
-        </li>
-        <li class="breadcrumbs-list__item">
-          <span class="breadcrumbs-list__current">Grand Hilton Hotel</span>
-        </li>
-      </ul>
+      <div class="wrapper">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-list__item">
+            <a href="#" class="breadcrumbs-list__link">Home</a>
+          </li>
+          <li class="breadcrumbs-list__item">
+            <a href="#" class="breadcrumbs-list__link">Flash Offers</a>
+          </li>
+          <li class="breadcrumbs-list__item">
+            <span class="breadcrumbs-list__current">Grand Hilton Hotel</span>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <main></main>
+    <main>
+      <section class="hotel">
+        <div class="wrapper">
+          <div class="hotel-info">
+            <div class="hotel-info__text">
+              <div class="hotel-wrapper">
+                <div class="hotel-stars">
+                  <img
+                    src="img/star.svg"
+                    alt="star"
+                    class="hotel-stars__image"
+                  />
+                  <img
+                    src="img/star.svg"
+                    alt="star"
+                    class="hotel-stars__image"
+                  />
+                  <img
+                    src="img/star.svg"
+                    alt="star"
+                    class="hotel-stars__image"
+                  />
+                  <img
+                    src="img/star.svg"
+                    alt="star"
+                    class="hotel-stars__image"
+                  />
+                  <img
+                    src="img/star.svg"
+                    alt="star"
+                    class="hotel-stars__image"
+                  />
+                </div>
+                <h1 class="hotel-name">Grand Hilton Hotel</h1>
+                <span class="offer">Flash Offer</span>
+              </div>
+              <p class="hotel-descriptrion">
+                Half-Board/ All Inclusive + Complimentary Activities + Child
+                Stays Free
+              </p>
+            </div>
+            <div class="hotel__user-rating">
+              <span class="user-rating__text">User Rattings</span>
+              <span class="user-rating__counter"
+                >4.5/<span class="user-rating__max">5</span></span
+              >
+            </div>
+          </div>
+          <div class="hotel-block">
+            <div class="photo-slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="img/slider-1.jpg"
+                      alt="photo 1"
+                      class="photo-slider__item"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/slider-2.jpg"
+                      alt="photo 2"
+                      class="photo-slider__item"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="photo-slider__button photo-slider__button--prev"
+                ></div>
+                <div
+                  class="photo-slider__button photo-slider__button--next"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="popup-menu .popup-menu--active"></div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

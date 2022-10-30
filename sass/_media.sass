@@ -22,10 +22,15 @@
       padding: 22px 0px
 
 @media (max-width: 678px)
+
+  body
+    min-width: 320px
+
   .header
     &-logo
       &__image
         width: 99px
+
   .menu-button
     display: flex
     flex-direction: column
@@ -39,7 +44,23 @@
       background-color: $text-color
       width: 16px
       height: 1px
+
   .wrapper
     max-width: 86%
+
   .search-form, .user, .nav
     display: none
+
+  .hotel
+    &-wrapper
+      justify-content: space-between
+    &__user-rating
+      display: none
+    &-stars
+      flex-basis: 23%
+    &-name
+      flex-basis: 100%
+
+  .offer
+    order: -1
+    margin-left: 0
