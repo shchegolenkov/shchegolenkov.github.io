@@ -2,11 +2,13 @@ var menuButton = document.querySelector('.header-top__menu-button');
 var popupMenu = document.querySelector('.popup-menu');
 var hotel = document.querySelector('.hotel');
 var newsletter = document.querySelector('.newsletter');
+var reviews = document.querySelector('.reviews');
 
 function popupMenuShow() { 
   popupMenu.classList.toggle('popup-menu--active')
   hotel.classList.toggle('section--disabled')
   newsletter.classList.toggle('section--disabled')
+  reviews.classList.toggle('section--disabled')
 };
 
 menuButton.addEventListener('click', popupMenuShow);
