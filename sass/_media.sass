@@ -2,12 +2,18 @@
   .wrapper, .reviews-slider
     max-width: 91%
 
+  .card
+    width: calc(50% - 15px)
+    margin-bottom: 30px
+
 @media (max-width: 992px)
   .search-form
     margin-left: auto
+
   .newsletter-wrapper
     width: 91%
     max-width: 700px
+
   .review
     width: 82.8%
 
@@ -19,12 +25,15 @@
     &-top
       padding-top: 30px
       padding-bottom: 30px
+
   .search-form
     width: 340px
+
   .nav
     &__link
       font-size: 12px
       padding: 22px 0px
+
   .hotel
     &-block
       flex-direction: column
@@ -35,14 +44,33 @@
       width: 50%
     &__map
       width: 50%
+
   .photo-slider
     width: 100%
+
   .subscribe-form__input
     width: 280px
+
   .review
     padding: 0px 62px 30px
     &::before, &::after
       display: none
+
+  .reviews
+    padding-bottom: 60px
+    &-header
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
+
+  .card
+    width: calc(50% - 10px)
+    margin-bottom: 20px
+
+  .activities
+    &-header
+      font-size: 24px
+      line-height: 30px
 
 @media (max-width: 678px)
 
@@ -118,6 +146,7 @@
     padding: 0px 31px 36px
 
   .reviews
+    padding-bottom: 50px
     &-slider
       &__button
         top: 45px
@@ -129,3 +158,17 @@
           right: 50%
           transform: translate(50%, -50%)
           margin-right: -77px
+    &-header
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 42px
+
+  .activities
+    padding-top: 40px
+    &-header
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 36px
+
+  .card
+    width: 100%
