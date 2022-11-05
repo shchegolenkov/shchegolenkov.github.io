@@ -25,6 +25,16 @@ img {
   display: none;
 }
 
+.button {
+  background-color: #EC1F46;
+  border: none;
+  color: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Nunito";
+  font-weight: 600;
+}
+
 .header {
   background-color: #fff;
 }
@@ -150,6 +160,7 @@ img {
 }
 .hotel-stars {
   flex-basis: 100%;
+  margin-bottom: 4px;
 }
 .hotel-stars__image {
   width: 8px;
@@ -316,17 +327,12 @@ img {
   color: inherit;
   text-decoration: none;
 }
-.booking-button {
-  background-color: #EC1F46;
+.booking__button {
   color: white;
-  border: none;
-  border-radius: 4px;
   width: 100%;
   min-height: 45px;
-  font-weight: 600;
   font-size: 14px;
   line-height: 19px;
-  cursor: pointer;
 }
 
 .price__start {
@@ -386,6 +392,146 @@ img {
   right: 0px;
   bottom: 0px;
   z-index: 100;
+}
+
+.packages {
+  background-color: #F5FAFE;
+  padding: 40px 0px 70px;
+}
+.packages-title {
+  margin-top: 0px;
+  margin-bottom: 65px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.packages-grid {
+  display: grid;
+  grid-template: 500px 500px/1fr 1fr 1fr;
+  gap: 30px;
+}
+.packages__item {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #0A223D;
+  color: white;
+  display: grid;
+  position: relative;
+  grid-template: 50% 50%/100%;
+}
+.packages__item--main {
+  grid-column: 1/3;
+  grid-template: 100%/50% 50%;
+}
+.packages__offer {
+  position: absolute;
+  color: white;
+  font-weight: 600;
+  background-color: #EC1F46;
+  border-radius: 4px;
+  top: 26px;
+  left: -4px;
+  font-size: 8px;
+  line-height: 10px;
+  padding: 4px 9px 4px 13px;
+}
+.packages__offer--main {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 8px 12px 8px 16px;
+}
+
+.package-img {
+  width: 100%;
+  height: 100%;
+}
+.package-description {
+  padding: 30px 21px 25px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.package-description--main {
+  padding: 46px 21px 30px 44px;
+}
+.package-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+.package-title--main {
+  margin-bottom: 27px;
+}
+.package-text {
+  margin: 0px 0px 34px 0px;
+  line-height: 160.6%;
+}
+.package-info {
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 15px;
+}
+.package-info--main {
+  margin-bottom: 37px;
+}
+.package-address {
+  margin-bottom: 11px;
+  position: relative;
+}
+.package-address::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  width: 14px;
+  height: 14px;
+  background: url(../img/location.svg) center no-repeat;
+}
+.package-guests {
+  margin-bottom: 11px;
+  position: relative;
+}
+.package-guests::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  width: 14px;
+  height: 14px;
+  background: url(../img/user.svg) center no-repeat;
+}
+.package-rooms {
+  position: relative;
+}
+.package-rooms::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  width: 14px;
+  height: 14px;
+  background: url(../img/home.svg) center no-repeat;
+}
+.package-old-price {
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+.package-actual-price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+.package-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.package__button {
+  padding: 10px 26px;
 }
 
 .newsletter {
@@ -572,6 +718,7 @@ img {
 .activities {
   padding-top: 60px;
   padding-bottom: 98px;
+  background-color: #F5FAFE;
 }
 .activities-header {
   margin: 0px 0px 57px 0px;
@@ -628,14 +775,7 @@ img {
   z-index: 2;
 }
 .card__button {
-  background-color: #EC1F46;
-  border: none;
-  color: inherit;
-  border-radius: 4px;
   padding: 7px 22px;
-  cursor: pointer;
-  font-family: "Nunito";
-  font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   z-index: 2;
