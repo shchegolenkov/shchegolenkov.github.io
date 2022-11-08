@@ -6,6 +6,9 @@
     width: calc(50% - 15px)
     margin-bottom: 30px
 
+  .package-text
+    font-size: 12px
+
 @media (max-width: 992px)
   .search-form
     margin-left: auto
@@ -16,6 +19,13 @@
 
   .review
     width: 82.8%
+
+  .packages
+    &-grid
+      grid-template: 500px 500px 500px / 1fr 1fr
+
+  .package-text
+    font-size: 14px
 
 @media (max-width: 768px)
   .header
@@ -71,6 +81,9 @@
     &-header
       font-size: 24px
       line-height: 30px
+
+  .package-text
+    font-size: 12px
 
 @media (max-width: 678px)
 
@@ -172,3 +185,28 @@
 
   .card
     width: 100%
+
+  .packages
+    &-grid
+      grid-template: repeat(5, 500px) / 1fr
+    &__item--main
+      grid-column: 1 / 2
+      grid-template: 50% / 100%
+    &__offer
+      font-size: 12px
+      line-height: 15px
+      padding: 8px 12px 8px 16px
+
+  .package
+    &_hotel-stars
+      display: none
+    &-text
+      display: none
+    &-title--main
+      margin-bottom: 0
+    &-info--main
+      margin-bottom: 0
+    &-description--main
+      padding: 30px 21px 25px 32px
+    &-actual-price
+      font-size: 22px
