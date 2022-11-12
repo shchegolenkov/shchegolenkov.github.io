@@ -1,17 +1,27 @@
 var menuButton = document.querySelector('.header-top__menu-button');
-var popupMenu = document.querySelector('.popup-menu');
-var hotel = document.querySelector('.hotel');
-var newsletter = document.querySelector('.newsletter');
-var reviews = document.querySelector('.reviews');
+var navMobile = document.querySelector('.nav');
+/* Скрыть секции
+var hotelSection = document.querySelector('.hotel');
+var packagesSection = document.querySelector('.packages');
+var newsletterSection = document.querySelector('.newsletter');
+var reviewsSection = document.querySelector('.reviews');
+var activitiesSection = document.querySelector('.activities');
+var footerSection = document.querySelector('.footer');
+*/
 
-function popupMenuShow() { 
-  popupMenu.classList.toggle('popup-menu--active')
-  hotel.classList.toggle('section--disabled')
-  newsletter.classList.toggle('section--disabled')
-  reviews.classList.toggle('section--disabled')
+menuButton.addEventListener('click', popupNavMobileShow);
+
+function popupNavMobileShow() {
+  navMobile.classList.toggle('nav--mobile--visible')
+  /* Скрыть секции
+  hotelSection.classList.toggle('section--disabled')
+  packagesSection.classList.toggle('section--disabled')
+  newsletterSection.classList.toggle('section--disabled')
+  reviewsSection.classList.toggle('section--disabled')
+  activitiesSection.classList.toggle('section--disabled')
+  footerSection.classList.toggle('section--disabled')
+  */
 };
-
-menuButton.addEventListener('click', popupMenuShow);
 
 // Swiper slider for hotel images:
 

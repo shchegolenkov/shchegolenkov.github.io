@@ -2,6 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/icon/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,8 +32,8 @@
     <title>Best Tour Plan - Hotel Booking</title>
   </head>
 
-  <body>
-    <header class="header">
+  <body class="body">
+    <header class="header header__mobile--fixed">
       <div class="wrapper">
         <div class="header-top">
           <a href="#" class="header-logo"
@@ -24,7 +42,7 @@
               alt="Logo: Best Tour Plan"
               class="header-logo__image"
           /></a>
-          <form action="#" class="search-form">
+          <form action="#" class="search-form search-form--mobile--hidden">
             <input
               type="text"
               class="search-form__input"
@@ -34,8 +52,8 @@
               <img src="img/search.svg" alt="Search" />
             </button>
           </form>
-          <div class="user">
-            <a href="#" class="user__link"
+          <div class="user user--mobile--hidden">
+            <a href="#" class="user__link user__link"
               ><img
                 src="img/user-avatar.jpg"
                 alt="Avatar"
@@ -53,6 +71,29 @@
       <nav class="nav">
         <div class="wrapper">
           <ul class="nav-list">
+            <li class="nav__item nav__item--mobile--visible">
+              <div class="user user--mobile--visible">
+                <a href="#" class="user__link user__link--mobile"
+                  ><img
+                    src="img/user-avatar.jpg"
+                    alt="Avatar"
+                    class="user__avatar"
+                  /><span class="user__name user__name--mobile">Natnan</span></a
+                >
+              </div>
+            </li>
+            <li class="nav__item nav__item--mobile--visible">
+              <form action="#" class="search-form search-form--mobile--visible">
+                <input
+                  type="text"
+                  class="search-form__input search-form__input--mobile--visible"
+                  placeholder="Search Location"
+                />
+                <button class="search-form__button" type="submit">
+                  <img src="img/search.svg" alt="Search" />
+                </button>
+              </form>
+            </li>
             <li class="nav__item">
               <a href="#" class="nav__link">All Deals</a>
             </li>
@@ -89,7 +130,7 @@
         </ul>
       </div>
     </nav>
-    <main>
+    <main class="main">
       <section class="hotel">
         <div class="wrapper">
           <div class="hotel-info">
@@ -688,7 +729,6 @@
         </div>
       </div>
     </footer>
-    <div class="popup-menu .popup-menu--active"></div>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/main.js"></script>

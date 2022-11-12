@@ -9,6 +9,10 @@
   .package-text
     font-size: 12px
 
+  .footer
+    &__contacts
+      max-width: 430px
+
 @media (max-width: 992px)
   .search-form
     margin-left: auto
@@ -27,6 +31,16 @@
   .package-text
     font-size: 14px
 
+  .footer
+    &__logo
+      width: 104px
+    &__additional
+      width: 200px
+    &__contacts
+      margin-right: 30px
+    &__input
+      flex-basis: 100%
+
 @media (max-width: 768px)
   .header
     &-logo
@@ -37,7 +51,8 @@
       padding-bottom: 30px
 
   .search-form
-    width: 340px
+    &__input
+      width: 340px
 
   .nav
     &__link
@@ -78,6 +93,7 @@
     margin-bottom: 20px
 
   .activities
+    padding-bottom: 50px
     &-header
       font-size: 24px
       line-height: 30px
@@ -85,15 +101,94 @@
   .package-text
     font-size: 12px
 
+  .footer
+    padding-top: 70px
+    &__grid
+      grid-template: repeat(4, min-content) / 1fr 283px 1fr
+      gap: 0px
+      row-gap: 20px
+      margin-bottom: 60px
+    &__logo
+      width: 98px
+      grid-row: 1
+    &__title
+      margin-top: 27px
+    &__additional
+      width: auto
+      grid-row: 2
+    &__social-network
+      grid-row: 1
+      grid-column: 2 / 4
+      margin-top: auto
+      margin-bottom: auto
+      margin-left: -14px
+    &__categories
+      grid-row: 2
+    &__legal
+      grid-row: 2
+    &__contacts
+      grid-row: 3
+      grid-column: span 3
+      padding-top: 14px
+      max-width: fit-content
+    &__message
+      grid-row: 4
+      grid-column: span 3
+      margin-top: -6px
+      max-width: 540px
+    &__input
+      flex-basis: 47%
+    &__bottom-ul
+      justify-content: flex-start
+
 @media (max-width: 678px)
 
   body
     min-width: 303px
 
   .header
+    &-top
+      padding: 0px
+      height: 70px
     &-logo
       &__image
         width: 99px
+    &__mobile
+      &--fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 100
+
+  .search-form
+    &--mobile
+      &--hidden
+        display: none
+      &--visible
+        margin-top: 10px
+        margin-bottom: 16px
+    &__input
+      &--mobile
+        &--visible
+          background-color: #fff
+          width: 245px
+
+  .user
+    &--mobile
+      &--hidden
+        display: none
+      &--visible
+        color: white
+    &__link
+      &--mobile
+        flex-direction: column
+    &__name
+      &--mobile
+        margin: 10px 0 0 0
+
+  .breadcrumbs
+    margin-top: 70px
 
   .menu-button
     display: flex
@@ -104,6 +199,7 @@
     justify-content: space-between
     background-color: inherit
     cursor: pointer
+    outline: none
     &__line
       background-color: $text-color
       width: 16px
@@ -112,8 +208,25 @@
   .wrapper
     max-width: 86%
 
-  .search-form, .user, .nav
+  .nav
     display: none
+    &-list
+      flex-direction: column
+      align-items: center
+    &__link
+      padding: 0
+    &__item
+      padding: 0px 0px 20px 0px
+      &--mobile--visible
+        display: block
+    &--mobile--visible
+      display: block
+      position: fixed
+      top: 70px
+      left: 0px
+      right: 0px
+      bottom: 0px
+      padding: 31px 0px
 
   .hotel
     &-wrapper
@@ -210,3 +323,58 @@
       padding: 30px 21px 25px 32px
     &-actual-price
       font-size: 22px
+
+  .footer
+    padding-top: 66px
+    &__grid
+      grid-template: min-content / 1fr
+      row-gap: 33px
+      margin-bottom: 25px
+    &__social-network
+      grid-row: 2
+      grid-column: 1
+      margin-left: 0
+      margin-top: auto
+    &__legal
+      grid-row: 3
+      grid-column: 1
+      margin-left: 0
+    &__additional
+      grid-row: 4
+      grid-column: 1
+    &__categories
+      grid-row: 5
+      grid-column: 1
+      margin-top: -3px
+    &__contacts
+      grid-row: 6
+      grid-column: 1
+      padding-top: 6px
+      margin-right: 0
+    &__message
+      grid-row: 7
+      grid-column: 1
+      margin-top: 3px
+      &-title
+        margin-bottom: 16px
+    &__input
+      flex-basis: 100%
+    &__title
+      margin-top: 0px
+    &__social-ul
+      margin-top: 7px
+    &__textarea
+      margin-bottom: 15px
+    &__button
+      order: 1
+    &__form-text
+      flex-basis: 100%
+      margin-bottom: 15px
+    &__payment
+      position: static
+      margin-top: 7px
+    &__bottom
+      &-ul
+        justify-content: space-between
+      &-text
+        font-size: 11px
