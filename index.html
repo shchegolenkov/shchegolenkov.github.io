@@ -685,24 +685,22 @@
             <h3 class="footer__title footer__message-title">
               Send us a message
             </h3>
-            <form action="" class="footer__form">
+            <form action="" class="form footer__form">
               <input
                 type="text"
-                class="footer__input"
+                class="input footer__input"
                 placeholder="Your Full Name*"
               />
               <input
                 type="text"
-                class="footer__input"
+                class="input footer__input"
                 placeholder="Phone Number*"
               />
               <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="10"
+                name="message"
+                id="footer-message"
                 placeholder="Message"
-                class="footer__textarea"
+                class="textarea footer__textarea"
               ></textarea>
               <button type="submit" class="button footer__button">Send</button>
               <span class="footer__form-text">* Required Fields</span>
@@ -729,6 +727,36 @@
         </div>
       </div>
     </footer>
+    <div class="modal modal-booking">
+      <div class="modal-overlay"></div>
+      <div class="modal-window">
+        <h2 class="modal__header">Booking</h2>
+        <form action="" class="form modal__form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+          />
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Phone Number*"
+          />
+          <input type="email" class="input modal__input" placeholder="Email*" />
+          <textarea
+            name="message"
+            id="modal-message"
+            placeholder="Message"
+            class="textarea modal__textarea"
+          ></textarea>
+          <button type="submit" class="button modal__button">Send</button>
+          <span class="modal__form-text">* Required Fields</span>
+        </form>
+        <a class="modal__button-close" href="#"
+          ><img src="img/close.svg" alt="Close modal dialog"
+        /></a>
+      </div>
+    </div>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/main.js"></script>

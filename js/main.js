@@ -62,3 +62,25 @@ const reviewSlider = new Swiper('.review-swiper', {
   },
 
 });
+
+// Open booking dialog:
+
+var openBookingModalButton = document.querySelector('.booking__button');
+var bookingModal = document.querySelector('.modal-booking');
+
+openBookingModalButton.addEventListener('click', bookingModalShow);
+
+function bookingModalShow() {
+  bookingModal.classList.add('modal-booking--visible')
+};
+
+// Close modal dialog:
+
+var closeModalButton = document.querySelector('.modal__button-close');
+
+closeModalButton.addEventListener('click', bookingModalClose);
+
+function bookingModalClose(event) {
+  event.preventDefault()
+  bookingModal.classList.remove('modal-booking--visible')
+};
