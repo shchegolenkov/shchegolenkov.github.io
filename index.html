@@ -427,9 +427,11 @@
           <form action="#" class="form subscribe-form">
             <input
               type="email"
+              name="email"
               class="subscribe-form__input"
               placeholder="Your email address"
               required
+              pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
             />
             <button class="subscribe-form__button" type="submit">Send</button>
           </form>
@@ -693,13 +695,16 @@
                 name="name"
                 placeholder="Your Full Name*"
                 required
+                minlength="2"
+                maxlength="100"
               />
               <input
-                type="text"
+                type="tel"
                 class="input footer__input"
                 placeholder="Phone Number*"
                 name="phone"
                 required
+                pattern="\+?[0-9\s\-\(\)]+"
               />
               <textarea
                 name="message"
@@ -741,13 +746,25 @@
             type="text"
             class="input modal__input"
             placeholder="Your Full Name*"
+            required
+            minlength="2"
+            maxlength="100"
           />
           <input
-            type="text"
+            type="tel"
             class="input modal__input"
             placeholder="Phone Number*"
+            name="phone"
+            required
+            pattern="\+?[0-9\s\-\(\)]+"
           />
-          <input type="email" class="input modal__input" placeholder="Email*" />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            required
+            pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
+          />
           <textarea
             name="message"
             id="modal-message"
