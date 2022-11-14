@@ -1040,7 +1040,7 @@ img {
   cursor: pointer;
   text-decoration: none;
 }
-.modal-booking--visible {
+.modal--visible {
   visibility: visible;
   opacity: 1;
 }
@@ -1476,5 +1476,11 @@ img {
   }
   .footer__bottom-text {
     font-size: 11px;
+  }
+  .modal-window {
+    min-width: 272px;
+    width: 90%;
+    padding-left: 7%;
+    padding-right: 7%;
   }
 }/*# sourceMappingURL=style.css.map */

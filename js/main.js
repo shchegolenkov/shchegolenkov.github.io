@@ -71,16 +71,25 @@ var bookingModal = document.querySelector('.modal-booking');
 openBookingModalButton.addEventListener('click', bookingModalShow);
 
 function bookingModalShow() {
-  bookingModal.classList.add('modal-booking--visible')
+  bookingModal.classList.add('modal--visible');  
 };
 
 // Close modal dialog:
 
+var modal = document.querySelector('.modal');
+
 var closeModalButton = document.querySelector('.modal__button-close');
+closeModalButton.addEventListener('click', modalClose);
 
-closeModalButton.addEventListener('click', bookingModalClose);
+var closeModalAround = document.querySelector('.modal-overlay');
+closeModalAround.addEventListener('click', modalClose);
 
-function bookingModalClose(event) {
-  event.preventDefault()
-  bookingModal.classList.remove('modal-booking--visible')
+function modalClose(event) {
+  event.preventDefault();
+  modal.classList.remove('modal--visible');
 };
+
+window.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') modal.classList.remove('modal--visible');
+});
+  
