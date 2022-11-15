@@ -93,3 +93,34 @@ window.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') modal.classList.remove('modal--visible');
 });
   
+// Form validation:
+
+$(".footer__form").validate(
+  {
+    messages: {
+      phone: {
+      required: "This field is required.",
+      minlength: "Please write your mobile phone number."
+    }
+    },
+    errorClass: "footer__form--error"
+  }
+);
+
+$(".subscribe-form").validate(
+  {
+    errorClass: "subscribe-form--error"
+  }
+);
+
+$(".modal__form").validate(
+  {
+    errorClass: "modal__form--error"
+  }
+);
+
+// Phone pattern:
+
+$(document).ready(function(){
+  $('.form__input-phone').mask('+7 (000) 000-00-00');
+});

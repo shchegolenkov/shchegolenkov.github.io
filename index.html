@@ -689,23 +689,28 @@
               Send us a message
             </h3>
             <form action="" class="form footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                name="name"
-                placeholder="Your Full Name*"
-                required
-                minlength="2"
-                maxlength="100"
-              />
-              <input
-                type="tel"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-                required
-                pattern="\+?[0-9\s\-\(\)]+"
-              />
+              <div class="footer__form-wrapper">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  name="name"
+                  placeholder="Your Full Name*"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                />
+              </div>
+              <div class="footer__form-wrapper">
+                <input
+                  type="tel"
+                  class="input footer__input form__input-phone"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                  pattern="\+?[0-9\s\-\(\)]+"
+                  minlength="18"
+                />
+              </div>
               <textarea
                 name="message"
                 id="footer-message"
@@ -746,6 +751,7 @@
             type="text"
             class="input modal__input"
             placeholder="Your Full Name*"
+            name="name"
             required
             minlength="2"
             maxlength="100"
@@ -762,6 +768,7 @@
             type="email"
             class="input modal__input"
             placeholder="Email*"
+            name="email"
             required
             pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
           />
@@ -781,8 +788,9 @@
     </div>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
     <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
