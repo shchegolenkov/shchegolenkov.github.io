@@ -43,7 +43,7 @@ const photoSlider = new Swiper('.photo-swiper', {
 
 });
 
-// Swiper slider for peviews:
+// Swiper slider for previews:
 
 const reviewSlider = new Swiper('.review-swiper', {
   // Optional parameters
