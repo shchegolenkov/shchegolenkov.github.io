@@ -35,6 +35,11 @@ img {
   cursor: pointer;
   font-family: "Nunito";
   font-weight: 600;
+  transition: background-color 0.1s linear;
+}
+.button:hover {
+  background-color: #cd1515;
+  transition: background-color 0.1s linear;
 }
 
 .input {
@@ -89,7 +94,6 @@ img {
   margin-right: auto;
   position: relative;
   border-radius: 6px;
-  overflow: hidden;
 }
 .search-form__input {
   border: none;
@@ -98,6 +102,7 @@ img {
   background-color: #F5FAFE;
   font-size: 12px;
   outline: none;
+  border-radius: 6px;
 }
 .search-form__input::-moz-placeholder {
   color: black;
@@ -110,13 +115,14 @@ img {
 }
 .search-form__button {
   position: absolute;
-  background-color: #EC1F46;
-  border: none;
   top: 0;
   right: 0;
   width: 65px;
   height: 100%;
-  cursor: pointer;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .user__link {
@@ -155,6 +161,11 @@ img {
   text-transform: uppercase;
   padding: 31px 0;
   line-height: 18px;
+  transition: 0.2s;
+}
+.nav__link:hover {
+  color: #EC1F46;
+  transition: 0.2s;
 }
 .nav__item--mobile--visible {
   display: none;
@@ -607,7 +618,10 @@ img {
   line-height: 18px;
   outline: none;
   color: #333;
-  border-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .subscribe-form__input::-moz-placeholder {
   color: #BDBDBD;
@@ -620,19 +634,17 @@ img {
 }
 .subscribe-form__button {
   position: absolute;
-  background-color: #EC1F46;
   color: white;
-  border: none;
   top: 0;
   right: 0;
   width: 65px;
   height: 55px;
-  cursor: pointer;
+  font-family: "Mulish";
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .reviews {
@@ -1063,6 +1075,26 @@ img {
   transition: opacity 0.5s;
 }
 
+label.search-form--error {
+  color: #333;
+  font-size: 12px;
+  line-height: 15px;
+  flex-basis: 100%;
+  position: absolute;
+  bottom: -20px;
+  padding-left: 23px;
+}
+
+label.search-form--mobile--error {
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+  flex-basis: 100%;
+  position: absolute;
+  bottom: -20px;
+  padding-left: 23px;
+}
+
 label.footer__form--error {
   display: block;
   margin-top: -12px;
@@ -1099,6 +1131,9 @@ label.modal__form--error {
   .card {
     width: calc(50% - 15px);
     margin-bottom: 30px;
+  }
+  .packages {
+    padding-top: 0px;
   }
   .package-text {
     font-size: 12px;
@@ -1282,6 +1317,8 @@ label.modal__form--error {
   .search-form__input--mobile--visible {
     background-color: #fff;
     width: 245px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
   .user--mobile--hidden {
     display: none;
@@ -1318,7 +1355,9 @@ label.modal__form--error {
     max-width: 86%;
   }
   .nav {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
   }
   .nav-list {
     flex-direction: column;
@@ -1334,7 +1373,9 @@ label.modal__form--error {
     display: block;
   }
   .nav--mobile--visible {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s ease-in-out;
     position: fixed;
     top: 70px;
     left: 0px;

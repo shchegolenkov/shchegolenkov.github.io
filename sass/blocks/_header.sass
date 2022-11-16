@@ -21,7 +21,6 @@
   margin-right: auto
   position: relative
   border-radius: 6px
-  overflow: hidden
   &__input
     border: none
     width: 350px
@@ -29,17 +28,19 @@
     background-color: $background-color
     font-size: 12px
     outline: none
+    border-radius: 6px
     &::placeholder
       color: black
   &__button
     position: absolute
-    background-color: $theme-color-red
-    border: none
     top: 0
     right: 0
     width: 65px
     height: 100%
-    cursor: pointer
+    border-bottom-left-radius: 0px
+    border-top-left-radius: 0px
+    border-bottom-right-radius: 6px
+    border-top-right-radius: 6px
 
 .user
   &__link
@@ -72,6 +73,10 @@
     text-transform: uppercase
     padding: 31px 0
     line-height: 18px
+    transition: 0.2s
+    &:hover
+      color: $theme-color-red
+      transition: 0.2s
   &__item
     &--mobile--visible
       display: none

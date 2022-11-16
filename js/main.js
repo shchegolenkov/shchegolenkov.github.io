@@ -74,6 +74,13 @@ function bookingModalShow() {
   bookingModal.classList.add('modal--visible');  
 };
 
+// Open packages dialog:
+
+$('.package__button').on('click', function(e) {
+  bookingModal.classList.add('modal--visible'); 
+}
+)
+
 // Close modal dialog:
 
 var modal = document.querySelector('.modal');
@@ -95,6 +102,24 @@ window.addEventListener('keydown', function (e) {
   
 // Form validation:
 
+$(".search-form--mobile--hidden").validate(
+  {
+    errorClass: "search-form--error"
+  }
+);
+
+$(".search-form--mobile--visible").validate(
+  {
+    errorClass: "search-form--mobile--error"
+  }
+);
+
+$(".subscribe-form").validate(
+  {
+    errorClass: "subscribe-form--error"
+  }
+);
+
 $(".footer__form").validate(
   {
     messages: {
@@ -104,12 +129,6 @@ $(".footer__form").validate(
     }
     },
     errorClass: "footer__form--error"
-  }
-);
-
-$(".subscribe-form").validate(
-  {
-    errorClass: "subscribe-form--error"
   }
 );
 
