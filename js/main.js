@@ -81,6 +81,13 @@ $('.package__button').on('click', function(e) {
 }
 )
 
+// Open activities dialog:
+
+$('.card__button').on('click', function(e) {
+  bookingModal.classList.add('modal--visible'); 
+}
+)
+
 // Close modal dialog:
 
 var modal = document.querySelector('.modal');

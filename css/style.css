@@ -1400,6 +1400,9 @@ label.modal__form--error {
     order: -1;
     margin-left: 0;
   }
+  .swiper-slide {
+    height: auto;
+  }
   .photo-slider {
     height: auto;
   }
